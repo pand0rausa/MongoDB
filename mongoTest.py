@@ -52,6 +52,7 @@ while counter < len(ip):
 
 		            if 'system.users' in db.collection_names():
 		                users = list(db.system.users.find())
+		                print users
 		                print "Database Users and Password Hashes:"
 
 		                for x in range (0,len(users)):
@@ -65,5 +66,5 @@ while counter < len(ip):
 	except Exception, e:
                 if str(e).find('need to login') != -1:
                 	print "Need to login."
-                    conn.close()
+                conn.close()
 
