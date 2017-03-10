@@ -64,7 +64,6 @@ while counter < len(ip):
 		conn.close()
 
 	except Exception, e:
-                if str(e).find('need to login') != -1:
-                	print "Need to login."
+                print e
                 conn.close()
 
